@@ -21,6 +21,40 @@
     <![endif]-->
   </head>
   <body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">양티</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">메인 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">게시판</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">버전 노트</a>
+      </li>
+    </ul>
+  </div>
+      <div class= "nav-item dropdown" style="float: right;">
+    
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          로그인하기
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">로그인</a>
+          <a class="dropdown-item" href="#">회원가입</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+</nav>
+  
+  
+  
     <div class="jumbotron">
   	<h1 class="display-4">양티의 개인 홈페이지</h1>
   	<p class="lead">이홈페이지는 포트폴리오용을 위한 홈페이지 연습용입니다.</p>
