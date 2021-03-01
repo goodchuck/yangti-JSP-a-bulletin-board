@@ -29,16 +29,16 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="main.jsp">메인 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="bbs.jsp">게시판</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="versionnote.jsp">버전 노트</a>
       </li>
-      <li class="nav-item">
+            <li class="nav-item">
         <a class="nav-link" href="gallery.jsp">갤러리</a>
       </li>
     </ul>
@@ -56,22 +56,29 @@
       </div>
 </nav>
   
-  
-  
-    <div class="jumbotron">
-  	<h1 class="display-4">양티의 개인 홈페이지</h1>
-  	<p class="lead">이홈페이지는 포트폴리오용을 위한 홈페이지 연습용입니다.</p>
-  	<hr class="my-4">
-  	<p>2021 02 28 만들기 시작</p>
-  	<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  	</div>
-  	
-  	<div class="alert alert-primary" role="alert">
-  	<h2>공지</h2>
-  	<p>mysql연동준비해야함</p>
+	<div class="alert alert-primary" role="alert">
+  	<p>21/03/01 버전노트 제작</p>
 	</div>
 	
-
+	<div class="alert alert-primary" role="alert">
+  	<p>21/02/28 최초 만들기 시작</p>
+	</div>
+ 
+ <nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

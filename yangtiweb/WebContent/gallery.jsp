@@ -29,7 +29,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="main.jsp">메인 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -38,7 +38,7 @@
       <li class="nav-item">
         <a class="nav-link" href="versionnote.jsp">버전 노트</a>
       </li>
-      <li class="nav-item">
+            <li class="nav-item active">
         <a class="nav-link" href="gallery.jsp">갤러리</a>
       </li>
     </ul>
@@ -56,21 +56,32 @@
       </div>
 </nav>
   
-  
-  
-    <div class="jumbotron">
-  	<h1 class="display-4">양티의 개인 홈페이지</h1>
-  	<p class="lead">이홈페이지는 포트폴리오용을 위한 홈페이지 연습용입니다.</p>
-  	<hr class="my-4">
-  	<p>2021 02 28 만들기 시작</p>
-  	<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  	</div>
-  	
-  	<div class="alert alert-primary" role="alert">
-  	<h2>공지</h2>
-  	<p>mysql연동준비해야함</p>
+  	<div class="container" style="position: absolute; left: 200px; width:500px">
+  	<h1>갤러리들</h1>
+  	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> <!-- 이미지 슬라이드 -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/KakaoTalk_20210217_203812646.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/KakaoTalk_20210217_203927826.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/KakaoTalk_20210224_082724341.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 	</div>
-	
+	</div>
+
+ 
 
 
 
