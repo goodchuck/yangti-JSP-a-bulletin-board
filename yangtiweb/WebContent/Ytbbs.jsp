@@ -30,7 +30,7 @@
         <a class="nav-link" href="main.jsp">메인 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="bbs.jsp">게시판</a>
+        <a class="nav-link" href="Ytbbs.jsp">게시판</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="versionnote.jsp">버전 노트</a>
@@ -112,6 +112,7 @@
 		
 		</div>
 		</nav>
+		
 	<div class="container">
 	<div class="row">
 		<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd"> 

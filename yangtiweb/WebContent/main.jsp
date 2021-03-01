@@ -19,6 +19,23 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+                body{
+                /*이미지가 화면 보다 크면 전부 표시되지 않는다.*/
+                background-image: url(images/background.jpg);
+                /*이미지 크기 변경으로 해결*/
+                /*background-size: 100% 100%와 같이 비율로 조정도 가능*/
+                 
+                /*
+                이미지 크기 변경 방법
+                1. 사이즈 입력
+                2. cover - 이미지가 클 경우 화면에 맞춰 자른다.(기본)
+                3. contain - 비율이 벗어나지 않는 선에서 축소
+                background-size: 속성;
+                */
+                background-size: 50%;
+}
+    </style>
   </head>
   <body>
   
@@ -33,7 +50,7 @@
         <a class="nav-link" href="main.jsp">메인 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="bbs.jsp">게시판</a>
+        <a class="nav-link" href="Ytbbs.jsp">게시판</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="versionnote.jsp">버전 노트</a>
@@ -49,7 +66,7 @@
           로그인하기
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">로그인</a>
+          <a class="dropdown-item" href="Ytlogin.jsp">로그인</a>
           <a class="dropdown-item" href="#">회원가입</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
@@ -58,7 +75,7 @@
   
   
   
-    <div class="jumbotron">
+    <div class="jumbotron" style="position: relative; left : 400px; width : 700px;">
   	<h1 class="display-4">양티의 개인 홈페이지</h1>
   	<p class="lead">이홈페이지는 포트폴리오용을 위한 홈페이지 연습용입니다.</p>
   	<hr class="my-4">
@@ -66,7 +83,7 @@
   	<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   	</div>
   	
-  	<div class="alert alert-primary" role="alert">
+  	<div class="alert alert-primary" role="alert" style="position: relative; left : 400px; width : 700px;" >
   	<h2>공지</h2>
   	<p>mysql연동준비해야함</p>
 	</div>
