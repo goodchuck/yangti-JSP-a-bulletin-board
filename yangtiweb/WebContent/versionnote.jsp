@@ -80,7 +80,9 @@
 	<% 
   	}
 	%>
-  
+  	<div class="alert alert-primary" role="alert">
+  	<p>21/03/02 로그인 회원가입 구현 및 mysql 등록</p>
+	</div>
 	<div class="alert alert-primary" role="alert">
   	<p>21/03/01 버전노트 제작</p>
 	</div>

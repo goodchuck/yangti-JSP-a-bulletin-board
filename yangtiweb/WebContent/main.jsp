@@ -108,7 +108,7 @@
   	
   	<div class="alert alert-primary" role="alert" style="position: relative; left : 400px; width : 700px;" >
   	<h2>공지</h2>
-  	<p>mysql연동준비해야함</p>
+  	<p>게시판 만들 준비</p>
 	</div>
 	
 
