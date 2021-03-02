@@ -21,6 +21,12 @@
     <![endif]-->
   </head>
   <body>
+  	<%
+  		String userID = null;
+  	if (session.getAttribute("userID") != null) {
+  		userID = (String) session.getAttribute("userID");
+  	}
+  	%>
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">양티</a>
@@ -33,28 +39,47 @@
         <a class="nav-link" href="main.jsp">메인 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="bbs.jsp">게시판</a>
+        <a class="nav-link" href="Ytbbs.jsp">게시판</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="versionnote.jsp">버전 노트</a>
       </li>
-            <li class="nav-item active">
+      <li class="nav-item active">
         <a class="nav-link" href="gallery.jsp">갤러리</a>
       </li>
     </ul>
   </div>
-      <div class= "nav-item dropdown" style="float: right;">
+  <%
+  	if(userID ==null) {
+  %>
+        <div class= "nav-item dropdown" style="float: right;">
     
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          로그인하기
+          접속하기
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">로그인</a>
-          <a class="dropdown-item" href="#">회원가입</a>
+          <a class="dropdown-item" href="Ytlogin.jsp">로그인</a>
+          <a class="dropdown-item" href="Ytjoin.jsp">회원가입</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </div>
-</nav>
+      </nav>
+  <%
+  	} else {
+  %>
+        <div class= "nav-item dropdown" style="float: right;">
+    
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          회원관리
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="YtlogoutAction.jsp">로그아웃</a>
+        </div>
+      </div>
+      </nav>
+	<% 
+  	}
+	%>
   
   	<div class="container" style="position: absolute; left: 200px; width:500px">
   	<h1>갤러리들</h1>

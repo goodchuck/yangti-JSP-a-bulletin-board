@@ -38,6 +38,12 @@
     </style>
   </head>
   <body>
+  	<%
+  		String userID = null;
+  	if (session.getAttribute("userID") != null) {
+  		userID = (String) session.getAttribute("userID");
+  	}
+  	%>
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">양티</a>
@@ -60,20 +66,37 @@
       </li>
     </ul>
   </div>
-      <div class= "nav-item dropdown" style="float: right;">
+  <%
+  	if(userID ==null) {
+  %>
+        <div class= "nav-item dropdown" style="float: right;">
     
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          로그인하기
+          접속하기
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="Ytlogin.jsp">로그인</a>
-          <a class="dropdown-item" href="#">회원가입</a>
+          <a class="dropdown-item" href="Ytjoin.jsp">회원가입</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </div>
-</nav>
-  
-  
+      </nav>
+  <%
+  	} else {
+  %>
+        <div class= "nav-item dropdown" style="float: right;">
+    
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          회원관리
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="YtlogoutAction.jsp">로그아웃</a>
+        </div>
+      </div>
+      </nav>
+	<% 
+  	}
+	%>
   
     <div class="jumbotron" style="position: relative; left : 400px; width : 700px;">
   	<h1 class="display-4">양티의 개인 홈페이지</h1>
