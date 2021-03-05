@@ -48,7 +48,7 @@
 	}
 	int pageNumber = 1;
 	if(request.getParameter("pageNumber") != null) {
-		pageNumber = Integer.parseInt(request.getParameter("pageNumber")); //파라미터는 다 정수형으로바꿔주는 함수써야함.
+		pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 	}
 %>
 
@@ -87,45 +87,31 @@
 		
 	<div class="container">
 	<div class="row">
-		<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd"> 
+	<form method="post" action="YtwriteAction.jsp">
+			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd"> 
 		<!-- 게시판 글 목록들이 홀수 짝수 색깔다르게하는거 -->
 			<thead>
 				<tr> <!-- 테이블 하나의 행 -->
-					<th style="background-color: #eeeeee; text-align: center;">번호</th>
-					<th style="background-color: #eeeeee; text-align: center;">제목</th>
-					<th style="background-color: #eeeeee; text-align: center;">작성자</th>
-					<th style="background-color: #eeeeee; text-align: center;">작성일</th>
+					<th colspan= "2"style="background-color: #eeeeee; text-align: center;">게시판 글쓰기 양식</th>
+
 				</tr>
 			</thead>
 			<tbody>
-			<%
-				BbsDAO bbsDAO = new BbsDAO();
-				ArrayList<Bbs> list = bbsDAO.getList(pageNumber);
-				for(int i = 0; i < list.size(); i++) {					
-			%>
-				<tr>
-					<td><%= list.get(i).getBbsID() %></td>
-					<td><a href="Ytview.jsp?bbsID=<%= list.get(i).getBbsID() %>"> <%= list.get(i).getBbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n","<br>") %></a></td>
-					<td><%= list.get(i).getUserID() %></td>
-					<td><%= list.get(i).getBbsDate().substring(0,11) + list.get(i).getBbsDate().substring(11, 13) + "시" + list.get(i).getBbsDate().substring(14,16) + "분" %></td>
-				</tr>
-				<%
-				}
-				%>
+			<tr>
+				<td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50"></td>
+			</tr>
+			<tr>
+			<td>
+			<textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height:350px;"></textarea></td>
+				<!-- 장문의 글을 작성할때 사용 -->
+			</tr>
+				
 			</tbody>
+			
 		</table>
-		<%
-			if(pageNumber != 1) {
-		%>
-			<a href = "Ytbbs.jsp?pageNumber=<%=pageNumber - 1%>" class="btn btn-success btn-arraw-left">이전</a>
-		<%
-			} if(bbsDAO.nextPage(pageNumber +1)) {
-		%>
-			<a href = "Ytbbs.jsp?pageNumber=<%=pageNumber +1%>" class="btn btn-success btn-arraw-left">다음</a>
-		<%
-			}
-		%>
-		<a href="Ytwrite.jsp" class="btn btn-primary pull-right">글쓰기</a>
+		<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
+	</form>
+
 	</div>
 	</div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

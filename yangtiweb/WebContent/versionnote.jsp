@@ -80,6 +80,9 @@
 	<% 
   	}
 	%>
+	  	<div class="alert alert-primary" role="alert">
+  	<p>21/03/05 게시판관련 거의 완성</p>
+	</div>
   	<div class="alert alert-primary" role="alert">
   	<p>21/03/02 로그인 회원가입 구현 및 mysql 등록</p>
 	</div>
