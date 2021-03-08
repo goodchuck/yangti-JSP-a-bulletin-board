@@ -141,7 +141,7 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // �����ͺ��̽� ����
+		return -1; // 데이터베이스 오류
 	}
 	
 	public int delete(int bbsID) {

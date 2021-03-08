@@ -80,7 +80,10 @@
 	<% 
   	}
 	%>
-	  	<div class="alert alert-primary" role="alert">
+	<div class="alert alert-primary" role="alert">
+  	<p>21/03/08 게시판 완성</p>
+	</div>
+	<div class="alert alert-primary" role="alert">
   	<p>21/03/05 게시판관련 거의 완성</p>
 	</div>
   	<div class="alert alert-primary" role="alert">
