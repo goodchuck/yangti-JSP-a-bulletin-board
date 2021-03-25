@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ page import="user.UserDAO" %>
 <%@ page import="java.io.PrintWriter" %> <!-- 자바스크립트 문장을 작성할때 사용하는것 -->
-<% request.setCharacterEncoding("UTF-8"); %> <!-- 건너오는 모든데이터를 utf-8로 받게끔 -->
+<%
+	request.setCharacterEncoding("UTF-8");
+%> <!-- 건너오는 모든데이터를 utf-8로 받게끔 -->
 <jsp:useBean id="user" class="user.User" scope="page" /> <!-- 현재 페이지 안에서만 빈즈 사용 -->
 <jsp:setProperty name="user" property="userID" />
 <jsp:setProperty name="user" property="userPassword" />
