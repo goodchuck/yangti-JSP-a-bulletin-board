@@ -113,7 +113,9 @@ body {
 		<h2>공지</h2>
 		<p>게시판 만들 준비</p>
 	</div>
-
+	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
+		Copyright &copy; 2021 양태현 All Rights Reserved.
+	</footer>
 
 
 

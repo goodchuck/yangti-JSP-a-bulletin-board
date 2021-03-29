@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="java.io.PrintWriter" %> <!-- 한글 깨짐 방지를 위한 초반 작업 -->
+<%@ page import="java.io.PrintWriter" %> <!-- 한글 깨짐 방지를 위한 초반 작업 -->
+<%@ page import="test.Main" %>
 <%
-HttpServletResponse res = (HttpServletResponse) response;
-res.setHeader("Access-Control-Allow-Origin", "*");    
-%>
+	request.setCharacterEncoding("UTF-8");
+%> <!-- 건너오는 모든데이터를 utf-8로 받게끔 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -100,49 +100,13 @@ res.setHeader("Access-Control-Allow-Origin", "*");
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
 </div>
 
-<p></p>
-<!-- 
-<script src="https://code.jquery.com/jquery-3.6.0.js"
-		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-		crossorigin="anonymous">
-</script>
- -->
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-  $.ajax({
-	  method: "GET",
-	  url: "https://dapi.kakao.com/v3/search/book?target=title",
-	  data: {query : "미움받을 용기"},
-  	  headers : {Authorization: "KakaoAK d857bb47178b4e644f9b47c79969d217"}
-	})
-	  .done(function( msg ) {
-	    $( "p" ).append( "<strong>" + msg.documents[0].title +"</strong>" );
-	    $( "p" ).append( "<img src='" + msg.documents[0].thumbnail +"'/>" );
-	  });
-</script>
-<script>
-  $.ajax({
-	  method:"GET",
-	  url: "https://api.neople.co.kr/df/servers/prey/characters?characterName=%EC%9E%98%ED%95%A0%EA%B2%8C%EC%97%AC",
-	  data : {serverId : "prey", characterName : "%ec%9e%98%ed%95%a0%ea%b2%8c%ec%97%ac"},
-	  headers : {apikey : "oMDk2YvEtfIzJG8SfXLWDZ3km3J1pKu6"},
-	  dataType:"json"
-  	})
-    .done(function(msg) {
-          // 통신이 성공적으로 이루어졌을 때 이 함수를 타게 된다.
-          // TODO
-          System.out.println("성공" + msg);
-          
-          var obj = JSON.parse(msg);
-          var num = obj.serverId;
-          var str = "서버 아이디" + num;
-  	    $( "p" ).append( "<strong>" + msg +"</strong>" );
-	})
-	.fail(function(jqXHR, textStatus, errorThrown){
-		alert("통신 실패");
-	});
-  </script>
-
+  
+<%
+	Main main = new Main();
+	String[] result = main.search();
+%>
+<p><%=result[0] %></p>
+<p><%=result[1] %></p>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
   </body>
 </html>
